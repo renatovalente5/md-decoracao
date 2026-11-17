@@ -4,8 +4,9 @@
 //   node scripts/build.mjs                       pré-visualização local (base /, noindex)
 //   node scripts/build.mjs --base=/md-decoracao --url=https://renatovalente5.github.io/md-decoracao
 //   node scripts/build.mjs --producao --url=https://mddecoracao.pt   (indexável, com sitemap)
-//   --proposta=a|b|c   o aspeto do site inteiro (por omissão a); as outras duas propostas da página inicial
-//                      saem sempre em /propostas/<letra>/ (noindex), com as mesmas páginas interiores.
+//   --proposta=a|b|c   o aspeto do site inteiro (por omissão a, a «Linho», escolhida pelo Renato a 17 nov 2026)
+//   --propostas        junta as três propostas da página inicial em /propostas/<letra>/ (noindex), só para comparar
+//                      localmente; a publicação não as leva.
 //
 // Antes: python3 scripts/imagens.py (gera .cache/imagens e o manifesto).
 import { readFileSync, writeFileSync, mkdirSync, rmSync, copyFileSync, existsSync, readdirSync } from 'node:fs';
@@ -23,6 +24,7 @@ const opcoes = {
   url: arg('url', 'http://127.0.0.1:5180'),
   proposta: arg('proposta', 'a'),
   producao: process.argv.includes('--producao'),
+  propostas: process.argv.includes('--propostas'),
   saida: join(RAIZ, arg('saida', '_site')),
 };
 opcoes.preview = !opcoes.producao;
@@ -125,13 +127,13 @@ const escrever = (caminho, html) => {
 for (const p of paginas) escrever(p.caminho, pagina(ctx, p));
 
 // as outras propostas da página inicial (só para mostrar; as ligações levam ao site principal)
-const outras = ['a', 'b', 'c'].filter((x) => x !== opcoes.proposta);
+const outras = opcoes.propostas ? ['a', 'b', 'c'].filter((x) => x !== opcoes.proposta) : [];
 for (const letra of outras) {
   const c2 = Object.assign(Object.create(ctx), { opcoes: { ...opcoes, proposta: letra, preview: true } });
   const p = P.inicio(c2);
   escrever(`/propostas/${letra}/`, pagina(c2, { ...p, caminho: `/propostas/${letra}/`, indexar: false }));
 }
-escrever(`/propostas/${opcoes.proposta}/`, pagina(ctx, { ...paginas[0], caminho: `/propostas/${opcoes.proposta}/`, indexar: false }));
+if (opcoes.propostas) escrever(`/propostas/${opcoes.proposta}/`, pagina(ctx, { ...paginas[0], caminho: `/propostas/${opcoes.proposta}/`, indexar: false }));
 
 // ---- imagens e vídeos usados ----
 let nImg = 0, nVid = 0;
@@ -167,4 +169,4 @@ if (opcoes.producao) {
   writeFileSync(join(opcoes.saida, 'robots.txt'), 'User-agent: *\nAllow: /\n');
 }
 
-console.log(`${paginas.length} páginas + ${outras.length + 1} propostas, ${nImg} imagens, ${nVid} vídeos → ${opcoes.saida} (proposta ${opcoes.proposta}${opcoes.producao ? ', produção' : ', pré-visualização noindex'})`);
+console.log(`${paginas.length} páginas${opcoes.propostas ? ` + ${outras.length + 1} propostas` : ''}, ${nImg} imagens, ${nVid} vídeos → ${opcoes.saida} (proposta ${opcoes.proposta}${opcoes.producao ? ', produção' : ', pré-visualização noindex'})`);
