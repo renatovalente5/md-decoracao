@@ -98,6 +98,7 @@ html[data-proposta="b"] :focus-visible { outline-color: var(--ouro); }
 .sobretitulo a::before { content: "← "; white-space: pre; }
 .sobretitulo a:hover { text-decoration: underline; }
 .estrela { display: inline-flex; width: 12px; height: 12px; color: var(--acento); flex: none; }
+@media (max-width: 420px) { .sobretitulo { font-size: .72rem; letter-spacing: .1em; gap: .5em; } }
 .estrela svg { width: 100%; height: 100%; }
 
 .moldura { position: relative; overflow: hidden; border-radius: var(--raio); background: var(--superficie-2); isolation: isolate; }
@@ -246,7 +247,7 @@ main > :last-child { padding-bottom: var(--seccao); }
 .capa--b { min-height: calc(100svh - var(--topo)); display: grid; align-items: end; color: #F3EEE4; isolation: isolate; }
 .capa--b .capa__fundo { position: absolute; inset: 0; z-index: -1; overflow: hidden; }
 .capa--b .capa__fundo .video { aspect-ratio: auto; height: 100%; }
-.capa--b .capa__fundo::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgb(28 32 31 / .15) 0%, rgb(28 32 31 / .25) 40%, rgb(28 32 31 / .9) 100%); pointer-events: none; }
+.capa--b .capa__fundo::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgb(28 32 31 / .1) 0%, rgb(28 32 31 / .2) 30%, rgb(28 32 31 / .82) 52%, rgb(28 32 31 / .96) 100%); pointer-events: none; }
 .capa--b .capa__grelha { padding-block: clamp(48px, 10vh, 120px) clamp(40px, 8vh, 96px); }
 .capa--b .capa__texto { max-width: 720px; }
 .capa--b .capa__lead { color: #DCD5C8; }
