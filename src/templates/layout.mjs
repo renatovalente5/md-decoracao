@@ -4,12 +4,12 @@ import { livroReclamacoes, telefoneHtml } from '../../legal-comum/index.mjs';
 
 export function pagina(ctx, p) {
   const { site, servicos, assets, opcoes } = ctx;
-  const titulo = p.titulo === site.marca ? site.titulo : `${p.titulo} | ${site.marca}`;
+  const titulo = p.titulo === site.marca ? site.titulo : `${p.titulo} | ${site.marcaCurta}`;
   const canonical = ctx.abs(ctx.href(p.caminho).replace(ctx.base, ''));
   const indexar = !opcoes.preview && p.indexar !== false;
   const og = p.ogImagem || ctx.partilhaMarca;
   const atual = (c) => p.seccao === c ? ' aria-current="page"' : '';
-  const temaCor = opcoes.proposta === 'b' ? '#1C201F' : '#F6F2EB';
+  const temaCor = '#F6F2EB';
   const precarregar = (p.precarregar || []).map((pr) =>
     `<link rel="preload" as="image" type="image/${pr.fmt}" imagesrcset="${pr.srcset}" imagesizes="${esc(pr.sizes)}" fetchpriority="high">`).join('\n');
   const wa = whatsappHref(site.whatsapp, 'Olá! Gostava de pedir um orçamento.');
@@ -22,7 +22,7 @@ export function pagina(ctx, p) {
   ];
 
   return `<!doctype html>
-<html lang="pt-PT" data-proposta="${opcoes.proposta}">
+<html lang="pt-PT">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">

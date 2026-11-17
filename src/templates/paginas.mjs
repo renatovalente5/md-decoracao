@@ -3,6 +3,8 @@ import { esc, foto, video, marca, icone, mesAno, whatsappHref, urlVariante, part
 import { telefoneHtml, ralHtml, direitosHtml, destinatariosHtml, textoSemCookies } from '../../legal-comum/index.mjs';
 
 const servicoPor = (ctx, slug) => ctx.servicos.find((s) => s.slug === slug);
+// «no Porto», «na Maia», «em Gaia»: a preposição certa para o nome do sítio
+export const emLocal = (local) => (/^Porto\b/.test(local) ? 'no ' : /^Maia\b/.test(local) ? 'na ' : 'em ') + local;
 const nomesServicos = (ctx, slugs) => slugs.map((s) => servicoPor(ctx, s)?.nome).filter(Boolean);
 const legenda = (ctx, t) => [t.local, nomesServicos(ctx, t.servicos)[0]].filter(Boolean).join(' · ');
 const ordenados = (ctx) => [...ctx.trabalhos].sort((a, b) => a.destaque - b.destaque);
@@ -98,96 +100,79 @@ const cabecalhoSeccao = (titulo, { lead = '', ligacao = '', id = '' } = {}) => `
 const ligacaoSeta = (href, texto) => `<a class="ligacao-seta" href="${href}">${texto}<span aria-hidden="true">${icone.seta}</span></a>`;
 
 // ---------- Início ----------
+// Curta (o Renato, 17 nov 2026: «ficou muito grande»): capa em mosaico que cabe no primeiro ecrã do telemóvel, os seis
+// serviços numa fila, os trabalhos numa fila que desliza, o antes e depois e o «Sobre» curto. Sem passos nem fecho.
 
 export function inicio(ctx) {
-  const { site, opcoes } = ctx;
-  const p = opcoes.proposta;
-  const destaques = ordenados(ctx).slice(0, 5);
+  const { site } = ctx;
   const capaVideo = 'capa-sanca-led';
+  const mosaico = [
+    { nome: 'divisoria-sala-sol', legenda: 'Divisória de vidro' },
+    { nome: 'curva-cortina', legenda: 'Janela curva' },
+  ];
 
-  const textoCapa = `<p class="sobretitulo"><span class="estrela" aria-hidden="true">${icone.estrela}</span>Decoração de interiores · Grande Porto</p>
-      <h1 class="capa__titulo">Cortinas por medida, <em>do teto ao chão.</em></h1>
-      <p class="capa__lead">Cortinas, estores, papel de parede e estofos, medidos e instalados por nós. O orçamento é grátis.</p>
+  const capa = `<section class="capa" aria-labelledby="capa-titulo">
+  <div class="contentor capa__grelha">
+    <div class="capa__texto">
+      <p class="sobretitulo"><span class="estrela" aria-hidden="true">${icone.estrela}</span>Decoração de interiores · Grande Porto</p>
+      <h1 class="capa__titulo" id="capa-titulo">Cortinas por medida, <em>do teto ao chão.</em></h1>
+      <p class="capa__lead">Cortinas, estores, papel de parede e estofos, medidos e instalados por nós.</p>
       <div class="capa__botoes">
-        <a class="botao" href="${ctx.href('/contactos/')}#pedido">Pedir orçamento grátis</a>
+        <a class="botao" href="${ctx.href('/contactos/')}#pedido">Pedir orçamento</a>
         <a class="botao botao--linha" href="${ctx.href('/trabalhos/')}">Ver trabalhos</a>
-      </div>`;
-
-  let capa;
-  if (p === 'b') {
-    capa = `<section class="capa capa--b" aria-labelledby="capa-titulo">
-  <div class="capa__fundo">${video(ctx, capaVideo, { classe: 'capa__video', rotulo: 'Sala com sanca de LED e cortinas de onda', prioridade: true, sizes: '100vw' })}</div>
-  <div class="contentor capa__grelha">
-    <div class="capa__texto" id="capa-titulo">${textoCapa}</div>
-  </div>
-</section>`;
-  } else if (p === 'c') {
-    const tri = ['curva-cortina', 'divisoria-sala-sol', 'aveiro-sanca-quente'];
-    const leg = ['Janela curva', 'Sala ao sol', 'Sanca com luz · Aveiro'];
-    capa = `<section class="capa capa--c" aria-labelledby="capa-titulo">
-  <div class="contentor">
-    <div class="capa__texto" id="capa-titulo">${textoCapa}</div>
-  </div>
-  <div class="capa__triptico">
-    ${tri.map((n, i) => `<figure class="capa__painel">${i === 1 ? video(ctx, 'sala-ao-sol', { rotulo: 'Sala com divisória de vidro e sol a entrar', prioridade: true, sizes: '(min-width: 900px) 34vw, 78vw', classe: 'moldura' }) : `<div class="moldura">${foto(ctx, n, { sizes: '(min-width: 900px) 30vw, 70vw' })}</div>`}<figcaption>${leg[i]}</figcaption></figure>`).join('')}
-  </div>
-</section>`;
-  } else {
-    capa = `<section class="capa capa--a" aria-labelledby="capa-titulo">
-  <div class="contentor capa__grelha">
-    <div class="capa__texto" id="capa-titulo">${textoCapa}</div>
-    <figure class="capa__media">
-      ${video(ctx, capaVideo, { classe: 'moldura', rotulo: 'Sala com sanca de LED e cortinas de onda', prioridade: true, sizes: '(min-width: 1000px) 42vw, 92vw' })}
-      <figcaption class="capa__legenda">Sala com sanca de LED · Cortinas de onda</figcaption>
-    </figure>
-  </div>
-</section>`;
-  }
-
-  const servicos = `<section class="seccao seccao--servicos" aria-labelledby="t-servicos">
-  <div class="contentor">
-    ${cabecalhoSeccao('Serviços', { id: 't-servicos', lead: 'Tudo à medida da sua casa, da escolha do tecido à instalação.', ligacao: ligacaoSeta(ctx.href('/servicos/'), 'Todos os serviços') })}
-  </div>
-  <div class="contentor contentor--fila">
-    <ul class="fila-servicos" data-fila>
-      ${ctx.servicos.map((s) => cartaoServico(ctx, s)).join('\n')}
-    </ul>
-  </div>
-</section>`;
-
-  const [d1, ...outros] = destaques;
-  const trabalhos = `<section class="seccao seccao--trabalhos" aria-labelledby="t-trabalhos">
-  <div class="contentor">
-    ${cabecalhoSeccao('Trabalhos recentes', { id: 't-trabalhos', ligacao: ligacaoSeta(ctx.href('/trabalhos/'), 'Ver todos os trabalhos') })}
-    <div class="mosaico">
-      ${cartaoTrabalho(ctx, d1, { classe: 'cartao-trabalho--grande', sizes: '(min-width: 1000px) 46vw, 92vw' })}
-      ${outros.map((t) => cartaoTrabalho(ctx, t, { sizes: '(min-width: 1000px) 22vw, 45vw' })).join('\n')}
+      </div>
+      <ul class="confianca" aria-label="Porque escolher a MD">
+        <li>${icone.orcamento}Orçamento grátis</li>
+        <li>${icone.medida}Medição em casa</li>
+        <li>${icone.local}Grande Porto</li>
+      </ul>
+    </div>
+    <div class="capa__mosaico">
+      <figure class="ladrilho ladrilho--video">
+        ${video(ctx, capaVideo, { classe: 'moldura', rotulo: 'Sala com sanca de LED e cortinas de onda', prioridade: true, sizes: '(min-width: 1000px) 31vw, 46vw' })}
+        <figcaption class="ladrilho__legenda">Sanca com LED</figcaption>
+      </figure>
+      ${mosaico.map((m) => `<figure class="ladrilho">
+        <div class="moldura">${foto(ctx, m.nome, { sizes: '(min-width: 1000px) 22vw, 46vw' })}</div>
+        <figcaption class="ladrilho__legenda">${esc(m.legenda)}</figcaption>
+      </figure>`).join('\n      ')}
     </div>
   </div>
 </section>`;
 
-  const pormenor = `<section class="seccao seccao--pormenor" aria-labelledby="t-pormenor">
+  const servicos = `<section class="seccao seccao--servicos" aria-labelledby="t-servicos">
   <div class="contentor">
-    <div class="pormenor">
-      <div class="pormenor__media">${video(ctx, 'luz-quente', { classe: 'moldura', rotulo: 'Cortina de onda iluminada por uma sanca de LED em luz quente', sizes: '(min-width: 900px) 34vw, 86vw' })}</div>
-      <div class="pormenor__texto">
-        <p class="sobretitulo sobretitulo--claro">O nosso pormenor</p>
-        <h2 class="pormenor__titulo" id="t-pormenor">A luz que desce pela cortina</h2>
-        <p>A calha fica escondida numa sanca no teto e uma luz quente cai sobre as ondas do tecido. De dia, o voile filtra o sol; à noite, a parede inteira ilumina a sala.</p>
-        <ul class="pormenor__lista">
-          <li><strong>Onda perfeita</strong>Ondas sempre iguais, abertas ou fechadas.</li>
-          <li><strong>Calha escondida</strong>Sem sanefas nem varões à vista.</li>
-          <li><strong>Luz LED</strong>Quente ou neutra, no tom da casa.</li>
-        </ul>
-        ${ligacaoSeta(ctx.href('/cortinas/'), 'Ver cortinas')}
+    ${cabecalhoSeccao('Serviços', { id: 't-servicos', ligacao: ligacaoSeta(ctx.href('/servicos/'), 'Todos os serviços') })}
+  </div>
+  <div class="contentor contentor--fila">
+    <ul class="fila-servicos">
+      ${ctx.servicos.map((s) => cartaoServico(ctx, s, { sizes: '(min-width: 1100px) 200px, (min-width: 700px) 16vw, 40vw' })).join('\n')}
+    </ul>
+  </div>
+</section>`;
+
+  const destaques = ordenados(ctx).slice(0, 8);
+  const trabalhos = `<section class="seccao seccao--trabalhos" aria-labelledby="t-trabalhos">
+  <div class="contentor">
+    <div class="seccao__cabeca">
+      <h2 class="seccao__titulo" id="t-trabalhos">Trabalhos</h2>
+      <div class="seccao__acoes">
+        <button class="redonda fila__seta" type="button" data-fila-ant="fila-trabalhos" aria-label="Trabalhos anteriores">${icone.anterior}</button>
+        <button class="redonda fila__seta" type="button" data-fila-seg="fila-trabalhos" aria-label="Mais trabalhos">${icone.seguinte}</button>
+        ${ligacaoSeta(ctx.href('/trabalhos/'), 'Ver todos')}
       </div>
+    </div>
+  </div>
+  <div class="contentor contentor--fila">
+    <div class="fila-trabalhos" id="fila-trabalhos" data-fila>
+      ${destaques.map((t) => cartaoTrabalho(ctx, t, { sizes: '(min-width: 1100px) 290px, (min-width: 700px) 34vw, 66vw' })).join('\n')}
     </div>
   </div>
 </section>`;
 
   const pares = [
-    { rotulo: 'Papel de parede', par: ['papel-sala-antes', 'papel-sala-depois'] },
     { rotulo: 'Cortinas', par: ['porto-sala-antes', 'porto-sala-depois'] },
+    { rotulo: 'Papel de parede', par: ['papel-sala-antes', 'papel-sala-depois'] },
     { rotulo: 'Estofos', par: ['estofo-sofa-antes', 'estofo-sofa-depois'] },
   ];
   const antesDepoisSec = `<section class="seccao seccao--antes" aria-labelledby="t-antes">
@@ -200,37 +185,29 @@ export function inicio(ctx) {
       </div>
     </div>
     <div class="antes-inicio__media">
-      ${pares.map((x, i) => `<div class="separadores__painel" role="tabpanel" id="painel-${i}" aria-labelledby="sep-${i}"${i ? ' hidden' : ''}>${antesDepois(ctx, x.par, { titulo: x.rotulo, sizes: '(min-width: 900px) 60vw, 92vw' })}</div>`).join('\n')}
+      ${pares.map((x, i) => `<div class="separadores__painel" role="tabpanel" id="painel-${i}" aria-labelledby="sep-${i}"${i ? ' hidden' : ''}>${antesDepois(ctx, x.par, { titulo: x.rotulo, sizes: '(min-width: 900px) 52vw, 92vw' })}</div>`).join('\n')}
     </div>
   </div>
 </section>`;
 
   const sobre = `<section class="seccao seccao--sobre" aria-labelledby="t-sobre">
-  <div class="contentor sobre-curto">
-    <div class="sobre-curto__foto moldura">${foto(ctx, 'gaia-ripado-aplicar', { sizes: '(min-width: 900px) 30vw, 80vw', alt: 'O Manuel Dias a aplicar papel de parede numa sala' })}</div>
-    <div class="sobre-curto__texto">
-      <h2 class="seccao__titulo" id="t-sobre">Quem mede é quem instala</h2>
-      <p>A MD Decoração de Interiores é o trabalho do Manuel Dias. Vai à sua casa, ajuda a escolher, mede e instala, com o mesmo cuidado do primeiro ao último pormenor.</p>
-      ${ligacaoSeta(ctx.href('/sobre/'), 'Conhecer a MD')}
-    </div>
-  </div>
-</section>`;
-
-  const garantias = `<section class="seccao seccao--garantias" aria-label="Porque escolher a MD">
   <div class="contentor">
-    <ul class="garantias">
-      <li class="garantia"><span class="garantia__icone">${icone.orcamento}</span><span class="garantia__texto"><strong>Orçamento grátis</strong><span>Sem compromisso, depois de ver o espaço.</span></span></li>
-      <li class="garantia"><span class="garantia__icone">${icone.medida}</span><span class="garantia__texto"><strong>Medição em casa</strong><span>Cada cortina e cada estore feitos para a sua janela.</span></span></li>
-      <li class="garantia"><span class="garantia__icone">${icone.local}</span><span class="garantia__texto"><strong>${esc(site.zonaResumo)}</strong><span>${esc(site.zonas.slice(0, 6).join(', '))} e mais.</span></span></li>
-    </ul>
+    <div class="sobre-curto">
+      <div class="sobre-curto__foto moldura">${foto(ctx, 'gaia-ripado-aplicar', { sizes: '(min-width: 900px) 220px, 120px', alt: 'O Manuel Dias a aplicar papel de parede numa sala' })}</div>
+      <div class="sobre-curto__texto">
+        <h2 class="seccao__titulo" id="t-sobre">Quem mede é quem instala</h2>
+        <p>A MD Decoração de Interiores é o trabalho do Manuel Dias: vai à sua casa, ajuda a escolher, mede e instala, com o mesmo cuidado do primeiro ao último pormenor.</p>
+        ${ligacaoSeta(ctx.href('/sobre/'), 'Conhecer a MD')}
+      </div>
+    </div>
   </div>
 </section>`;
 
   return {
     caminho: '/', titulo: site.marca, seccao: 'inicio', descricao: site.descricao,
-    precarregar: p === 'c' ? precarregarPoster(ctx, 'sala-ao-sol', '(min-width: 900px) 34vw, 78vw') : precarregarPoster(ctx, capaVideo, p === 'b' ? '100vw' : '(min-width: 1000px) 42vw, 92vw'),
+    precarregar: precarregarPoster(ctx, capaVideo, '(min-width: 1000px) 31vw, 46vw'),
     jsonLd: [ldNegocio(ctx), { '@context': 'https://schema.org', '@type': 'WebSite', name: site.marca, alternateName: site.marcaCurta, url: ctx.abs('/') }],
-    corpo: [capa, servicos, trabalhos, pormenor, antesDepoisSec, sobre, garantias].join('\n'),
+    corpo: [capa, servicos, trabalhos, antesDepoisSec, sobre].join('\n'),
   };
 }
 
@@ -432,8 +409,8 @@ export function trabalho(ctx, t, i, lista) {
 </article>
 ${lightbox()}`;
   return {
-    caminho: `/trabalhos/${t.slug}/`, titulo: t.local ? `${t.titulo} em ${t.local}` : t.titulo, seccao: 'trabalhos', corpo,
-    descricao: `${t.resumo} ${servs.map((s) => s.nome).join(', ')}${t.local ? ' em ' + t.local : ''}, pela ${ctx.site.marca}.`,
+    caminho: `/trabalhos/${t.slug}/`, titulo: t.local ? `${t.titulo} ${emLocal(t.local)}` : t.titulo, seccao: 'trabalhos', corpo,
+    descricao: `${t.resumo} ${servs.map((s) => s.nome).join(', ')}${t.local ? ' ' + emLocal(t.local) : ''}, pela ${ctx.site.marca}.`,
     ogImagem: partilhaFoto(ctx, primeira),
     precarregar: precarregar(ctx, primeira, '(min-width: 1000px) 56vw, 92vw'),
     jsonLd: [migalhas(ctx, [['Início', '/'], ['Trabalhos', '/trabalhos/'], [t.titulo, `/trabalhos/${t.slug}/`]])],

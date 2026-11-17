@@ -66,7 +66,7 @@
 
   /* ---------- entrar ao descer: só o que está abaixo do primeiro ecrã ---------- */
   if (!menosMovimento.matches && 'IntersectionObserver' in window) {
-    const ALVOS = '.seccao__cabeca, .cartao-servico, .cartao-trabalho, .pormenor, .antes-depois, .sobre-curto, .garantia, .item, .linha-servico, .galeria__item, .pergunta, .factos li, .pedido, .contactos__diretos, .fila-servicos';
+    const ALVOS = '.seccao__cabeca, .fila-servicos, .fila-trabalhos, .cartao-servico, .cartao-trabalho, .antes-inicio, .antes-depois, .sobre-curto, .item, .linha-servico, .galeria__item, .pergunta, .factos li, .pedido, .contactos__diretos';
     const h = innerHeight;
     const alvos = $$(ALVOS).filter((el) => {
       if (el.parentElement.closest(ALVOS)) return false;
@@ -86,6 +86,28 @@
       });
     }, { rootMargin: '0px 0px -8% 0px' });
     alvos.forEach((el) => { el.classList.add('revelar'); io.observe(el); });
+  }
+
+  /* ---------- filas que deslizam: as setas (computador) andam um ecrã de cartões; nas pontas ficam desativadas ---------- */
+  for (const fila of $$('[data-fila]')) {
+    const ant = $('[data-fila-ant="' + fila.id + '"]');
+    const seg = $('[data-fila-seg="' + fila.id + '"]');
+    if (!ant || !seg) continue;
+    const estado = () => {
+      ant.disabled = fila.scrollLeft <= 2;
+      seg.disabled = fila.scrollLeft + fila.clientWidth >= fila.scrollWidth - 2;
+    };
+    const andar = (dir) => {
+      const cartao = fila.firstElementChild;
+      const passo = cartao ? cartao.getBoundingClientRect().width + (parseFloat(getComputedStyle(fila).columnGap) || 20) : fila.clientWidth * 0.8;
+      const n = Math.max(1, Math.floor((fila.clientWidth - 40) / passo));
+      fila.scrollBy({ left: dir * passo * n, behavior: menosMovimento.matches ? 'auto' : 'smooth' });
+    };
+    ant.addEventListener('click', () => andar(-1));
+    seg.addEventListener('click', () => andar(1));
+    fila.addEventListener('scroll', estado, { passive: true });
+    addEventListener('resize', estado);
+    estado();
   }
 
   /* ---------- separadores (antes e depois na página inicial) ---------- */
