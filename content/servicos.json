@@ -1,0 +1,274 @@
+[
+  {
+    "slug": "cortinas",
+    "nome": "Cortinas",
+    "nomeLongo": "Cortinas e cortinados por medida",
+    "titulo": "Cortinas e cortinados por medida no Grande Porto",
+    "descricao": "Cortinas de onda em voile, linho e blackout, por medida e do teto ao chão, com calha embutida ou sanca com luz LED. Medição em casa e orçamento grátis no Grande Porto.",
+    "resumo": "Cortinas de onda do teto ao chão, em voile, linho ou blackout, com calha embutida ou sanca com luz.",
+    "intro": "Cortinas de onda feitas à medida de cada janela e instaladas por quem as mediu. Do teto ao chão, para filtrar a luz, dar privacidade e acabar a divisão.",
+    "capa": "voile-cadeirao",
+    "fotos": [
+      "vista-mar-sala-led",
+      "divisoria-sala-sol",
+      "curva-cortina",
+      "aveiro-sanca-quente",
+      "canidelo-chao",
+      "matosinhos-quarto-led",
+      "gaia-novos-linho",
+      "estetica-cortina"
+    ],
+    "video": "voile-luz",
+    "itens": [
+      {
+        "titulo": "Onda perfeita",
+        "texto": "Ondas sempre iguais, numa calha discreta: abrem e fecham sem esforço e caem direitas até ao chão."
+      },
+      {
+        "titulo": "Voile, linho ou blackout",
+        "texto": "Um voile para filtrar a luz, linho para mais textura, ou um blackout por trás para escurecer o quarto."
+      },
+      {
+        "titulo": "Sanca com luz LED",
+        "texto": "A calha fica escondida no teto e uma luz quente desce pela cortina. À noite, a parede passa a ser a luz da sala."
+      },
+      {
+        "titulo": "Sem sanefa nem varões",
+        "texto": "Trocamos sanefas e varões antigos por calhas embutidas: a parede fica limpa e a cortina mais fácil de lavar."
+      }
+    ],
+    "perguntas": [
+      {
+        "p": "Quanto custam umas cortinas por medida?",
+        "r": "Depende da largura e da altura da parede, do tecido e da calha. Medimos em casa e enviamos o orçamento, sem compromisso."
+      },
+      {
+        "p": "O que é uma cortina de onda?",
+        "r": "É uma cortina presa numa calha com rodízios espaçados por igual, que fazem ondas regulares e suaves em todo o comprimento, aberta ou fechada."
+      },
+      {
+        "p": "Fazem cortinas para janelas curvas ou muito altas?",
+        "r": "Sim. A calha acompanha a curva de uma janela de sacada e a cortina pode ir do teto ao chão em pés-direitos altos."
+      },
+      {
+        "p": "Também fazem cortinas para lojas e escritórios?",
+        "r": "Sim: salões de estética, escritórios e outros espaços de trabalho, além de casas."
+      }
+    ]
+  },
+  {
+    "slug": "estores",
+    "nome": "Estores",
+    "nomeLongo": "Estores por medida",
+    "titulo": "Estores dia e noite e estores de rolo por medida",
+    "descricao": "Estores dia e noite e estores de rolo opacos ou translúcidos, por medida, para cozinhas, quartos, escritórios e portas de correr. Orçamento grátis no Grande Porto.",
+    "resumo": "Estores dia e noite e estores de rolo, opacos ou translúcidos, à medida de cada vão.",
+    "intro": "Estores que controlam a luz sem ocupar espaço: os dia e noite com faixas que se alinham ou se fecham, e os de rolo, opacos ou translúcidos.",
+    "capa": "campo-estore-porta",
+    "fotos": [
+      "campo-estore-porta",
+      "lago-estore",
+      "campo-estore-claro",
+      "campo-estore-cozinha",
+      "campo-estore-faixas"
+    ],
+    "video": "",
+    "itens": [
+      {
+        "titulo": "Dia e noite",
+        "texto": "Faixas alternadas de tecido e de voile: alinhadas deixam passar a luz, desencontradas dão privacidade."
+      },
+      {
+        "titulo": "Rolo opaco",
+        "texto": "Para escurecer o quarto; enrolado, quase não se vê."
+      },
+      {
+        "titulo": "Por medida",
+        "texto": "Na janela ou na parede, de cozinhas e quartos a portas de correr."
+      }
+    ],
+    "perguntas": [
+      {
+        "p": "Qual a diferença entre estore dia e noite e estore de rolo?",
+        "r": "O dia e noite tem faixas alternadas que regulam a luz; o de rolo é um tecido contínuo, opaco ou translúcido, que sobe e desce."
+      }
+    ]
+  },
+  {
+    "slug": "papel-de-parede",
+    "nome": "Papel de parede",
+    "nomeLongo": "Papel de parede",
+    "titulo": "Aplicação de papel de parede no Grande Porto",
+    "descricao": "Escolha e aplicação de papel de parede: texturas, relevo, folhagem e padrões geométricos, em salas, quartos e escritórios. Antes e depois e orçamento grátis.",
+    "resumo": "Texturas, relevo e padrões, escolhidos consigo e aplicados sem obras.",
+    "intro": "Uma parede com papel muda a divisão sem obras: textura, cor e padrão, escolhidos consigo e aplicados com acabamento limpo.",
+    "capa": "papel-folhagem",
+    "fotos": [
+      "papel-folhagem",
+      "valongo-sala-papel",
+      "papel-relevo",
+      "gaia-ripado",
+      "valongo-quarto-papel",
+      "papel-ramos"
+    ],
+    "video": "aplicar-papel",
+    "antesDepois": [
+      [
+        "papel-sala-antes",
+        "papel-sala-depois"
+      ],
+      [
+        "papel-quarto-antes",
+        "papel-quarto-depois"
+      ]
+    ],
+    "itens": [
+      {
+        "titulo": "Escolha",
+        "texto": "Ajudamos a escolher o padrão e o tom para a luz e o estilo da divisão."
+      },
+      {
+        "titulo": "Aplicação",
+        "texto": "Parede preparada, emendas alinhadas e cortes rentes a rodapés, tomadas e janelas."
+      },
+      {
+        "titulo": "Sem obras",
+        "texto": "Muda a divisão sem obras complexas nem mudanças na casa."
+      }
+    ],
+    "perguntas": [
+      {
+        "p": "Quanto custa aplicar papel de parede?",
+        "r": "Depende da área, do papel e do estado da parede. Medimos e enviamos o orçamento com o papel e a aplicação."
+      },
+      {
+        "p": "Dá para pôr papel numa só parede?",
+        "r": "Sim, e é o mais comum: a parede da televisão ou a da cabeceira da cama."
+      }
+    ]
+  },
+  {
+    "slug": "estofos",
+    "nome": "Estofos",
+    "nomeLongo": "Estofos",
+    "titulo": "Estofador: renovar sofás, cadeirões e cadeiras",
+    "descricao": "Serviço de estofo: restauramos a estrutura, renovamos o enchimento e aplicamos tecido novo em sofás, cadeirões, cadeiras e pufes. Orçamento grátis no Grande Porto.",
+    "resumo": "Sofás, cadeirões, cadeiras e pufes com estrutura restaurada e tecido novo.",
+    "intro": "Um sofá de que gosta não precisa de ir para o lixo. Restauramos a estrutura, renovamos o enchimento e aplicamos um tecido novo à sua escolha.",
+    "capa": "estofo-cadeirao-depois",
+    "fotos": [
+      "estofo-cadeirao-depois",
+      "estofo-sofa-depois"
+    ],
+    "video": "",
+    "antesDepois": [
+      [
+        "estofo-sofa-antes",
+        "estofo-sofa-depois"
+      ],
+      [
+        "estofo-cadeirao-antes",
+        "estofo-cadeirao-depois"
+      ]
+    ],
+    "itens": [
+      {
+        "titulo": "Estrutura",
+        "texto": "Reforçamos o que está solto ou partido antes de tudo o resto."
+      },
+      {
+        "titulo": "Enchimento",
+        "texto": "Renovamos o enchimento, para voltar a ser confortável."
+      },
+      {
+        "titulo": "Tecido",
+        "texto": "Escolhe o tecido e a cor: o sofá fica com outra vida."
+      }
+    ],
+    "perguntas": [
+      {
+        "p": "Compensa estofar um sofá antigo?",
+        "r": "Se a estrutura é boa, quase sempre: fica com o conforto e o tecido que escolher, sem trocar a peça."
+      }
+    ]
+  },
+  {
+    "slug": "carpetes-e-tapetes",
+    "nome": "Carpetes e tapetes",
+    "nomeLongo": "Carpetes e tapetes por medida",
+    "titulo": "Carpetes e tapetes por medida",
+    "descricao": "Carpetes e tapetes por medida para salas e quartos: medimos o espaço e ajudamos a escolher o tamanho, a forma, a cor e a textura. Orçamento grátis.",
+    "resumo": "Do tamanho certo para a sala ou o quarto, na cor e na textura que escolher.",
+    "intro": "Um tapete do tamanho certo assenta a sala e aquece o quarto. Medimos o espaço e ajudamos a escolher a forma, a cor e o toque.",
+    "capa": "areia-quarto",
+    "fotos": [
+      "areia-quarto",
+      "tapete-quarto",
+      "tapete-pormenor"
+    ],
+    "video": "",
+    "itens": [
+      {
+        "titulo": "Medida certa",
+        "texto": "Medimos o comprimento e a largura da área e a posição dos móveis."
+      },
+      {
+        "titulo": "Forma e estilo",
+        "texto": "Retangular, redondo ou orgânico, de pelo curto ou comprido."
+      },
+      {
+        "titulo": "Cor e textura",
+        "texto": "Várias cores e texturas, para combinar com o chão e os tecidos da casa."
+      }
+    ],
+    "perguntas": [
+      {
+        "p": "Como sei o tamanho do tapete?",
+        "r": "Medimos a área e a posição do sofá ou da cama e sugerimos a medida que equilibra o espaço."
+      }
+    ]
+  },
+  {
+    "slug": "remodelacoes",
+    "nome": "Remodelações",
+    "nomeLongo": "Remodelação de divisões",
+    "titulo": "Remodelação de quartos e salas, chave na mão",
+    "descricao": "Remodelação de quartos e salas: teto falso, iluminação, pavimento flutuante, papel de parede e cortinas, num só projeto. Orçamento grátis no Grande Porto.",
+    "resumo": "Teto falso, iluminação, chão, papel de parede e cortinas, num só projeto.",
+    "intro": "Quando a divisão pede mais do que cortinas: teto falso com luz embutida, chão novo, papel de parede e cortinas, num só projeto e com a mesma equipa.",
+    "capa": "valongo-quarto-depois",
+    "fotos": [
+      "valongo-quarto-depois",
+      "valongo-sala-cortina",
+      "valongo-quarto-papel",
+      "valongo-sala-tv"
+    ],
+    "video": "",
+    "antesDepois": [
+      [
+        "valongo-quarto-antes",
+        "valongo-quarto-depois"
+      ]
+    ],
+    "itens": [
+      {
+        "titulo": "Teto falso e luz",
+        "texto": "Pladur com sanca, focos e luz LED embutida."
+      },
+      {
+        "titulo": "Pavimento",
+        "texto": "Pavimento flutuante, mais atual e fácil de manter."
+      },
+      {
+        "titulo": "Acabamentos",
+        "texto": "Papel de parede e cortinas, pensados com o resto da divisão."
+      }
+    ],
+    "perguntas": [
+      {
+        "p": "Quanto tempo demora remodelar um quarto?",
+        "r": "Depende do que se faz. Combinamos as datas no orçamento, para saber de antemão quando fica pronto."
+      }
+    ]
+  }
+]

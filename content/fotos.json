@@ -1,0 +1,807 @@
+{
+ "vista-mar-sala-led": {
+  "alt": "Sala ampla com sanca de luz LED quente por cima de cortinas de onda em voile branco, sofá cinzento e tapete claro sobre mármore",
+  "foco": 45,
+  "w": 1272,
+  "h": 2220,
+  "origem": "instagram/media/DbTlyAgMySQ_01.jpg"
+ },
+ "vista-mar-sala-led-larga": {
+  "alt": "Parede inteira de cortinas de onda em voile iluminadas pela sanca de LED, numa sala com sofá cinzento",
+  "foco": 50,
+  "w": 1272,
+  "h": 848,
+  "origem": "instagram/media/DbTlyAgMySQ_01.jpg"
+ },
+ "vista-mar-janela": {
+  "alt": "Janela com vista para o mar e a praia, numa parede com sanca",
+  "foco": 45,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DbTlyAgMySQ_01_18.75.jpg"
+ },
+ "vista-mar-sala-dia": {
+  "alt": "Sala com cadeirão claro e porta de vidro aberta para a varanda sobre o mar",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DbTlyAgMySQ_01_01.50.jpg"
+ },
+ "vista-mar-cadeirao": {
+  "alt": "Cadeirão claro junto a uma janela com vista de mar",
+  "foco": 55,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DbTlyAgMySQ_01_36.50.jpg"
+ },
+ "vista-mar-voile": {
+  "alt": "Cortina de voile branco do teto ao chão, com a luz do dia a passar",
+  "foco": 45,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DbTlyAgMySQ_01_32.25.jpg"
+ },
+ "vista-mar-sanca": {
+  "alt": "Sanca com luz LED quente sobre as ondas de uma cortina clara",
+  "foco": 30,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DbTlyAgMySQ_01_62.75.jpg"
+ },
+ "vista-mar-roupeiro": {
+  "alt": "Quarto com roupeiro de madeira e cortina de onda iluminada pela sanca",
+  "foco": 45,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DbTlyAgMySQ_01_63.50.jpg"
+ },
+ "divisoria-sala-sol": {
+  "alt": "Sofá claro com almofadas mostarda ao sol, à frente de uma divisória de vidro com cortinas de onda em linho",
+  "foco": 52,
+  "w": 1217,
+  "h": 2160,
+  "origem": "instagram/media/DZLVavBsNIV_01.jpg"
+ },
+ "divisoria-sala": {
+  "alt": "Sala com divisória de vidro e caixilho preto, cortinas de linho por trás e sofá claro",
+  "foco": 55,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DZLVavBsNIV_01_16.75.jpg"
+ },
+ "divisoria-janela": {
+  "alt": "Porta de sacada com vista para a cidade, ao lado do sofá",
+  "foco": 45,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DZLVavBsNIV_01_03.50.jpg"
+ },
+ "divisoria-quarto": {
+  "alt": "Quarto com cama clara, ventoinha de teto e cortinas de linho",
+  "foco": 55,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DZLVavBsNIV_01_26.00.jpg"
+ },
+ "divisoria-quarto-sol": {
+  "alt": "Cama com colcha de linho e o sol a entrar pelas cortinas",
+  "foco": 55,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DZLVavBsNIV_01_32.25.jpg"
+ },
+ "lago-sala-jantar": {
+  "alt": "Sala de jantar com mesa redonda de madeira, parede ripada e janelas para um terraço com palmeiras",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DZatGGWMiFe_01_06.50.jpg"
+ },
+ "lago-mesa": {
+  "alt": "Mesa redonda de madeira com um centro de mesa claro",
+  "foco": 55,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DZatGGWMiFe_01_08.50.jpg"
+ },
+ "lago-quarto-led": {
+  "alt": "Quarto com cortina de onda iluminada por uma sanca de LED e cama com colcha verde",
+  "foco": 45,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DZatGGWMiFe_01_32.00.jpg"
+ },
+ "lago-secretaria": {
+  "alt": "Secretária de madeira com cadeira branca, quadro e candeeiro, junto à cortina",
+  "foco": 55,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DZatGGWMiFe_01_24.25.jpg"
+ },
+ "lago-estore": {
+  "alt": "Quarto com estore de rolo opaco a meio da janela e cama com colcha verde",
+  "foco": 45,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DZatGGWMiFe_01_21.50.jpg"
+ },
+ "gaia-novos-varanda": {
+  "alt": "Porta de correr para a varanda, num apartamento novo, com estore e cortina",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DaORR9uM2CI_01_06.75.jpg"
+ },
+ "gaia-novos-janela-alta": {
+  "alt": "Janela estreita e alta com cortina de voile e focos de luz no teto",
+  "foco": 40,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DaORR9uM2CI_01_24.75.jpg"
+ },
+ "gaia-novos-quarto": {
+  "alt": "Quarto com cortinas de onda cinzentas do teto ao chão",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DaORR9uM2CI_01_37.25.jpg"
+ },
+ "gaia-novos-voile": {
+  "alt": "Cortina de voile vista de baixo, com a luz a atravessar o tecido",
+  "foco": 40,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/De2PQ6gOxH4_01_14.50.jpg"
+ },
+ "gaia-novos-linho": {
+  "alt": "Pormenor do tecido de linho de uma cortina de onda",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/De2PQ6gOxH4_01_21.00.jpg"
+ },
+ "gaia-novos-por-do-sol": {
+  "alt": "Varanda com vista sobre a cidade ao fim da tarde",
+  "foco": 50,
+  "w": 720,
+  "h": 1144,
+  "origem": "fotogramas/posts/De2PQ6gOxH4_01_25.75.jpg"
+ },
+ "gaia-novos-sala": {
+  "alt": "Cortina de onda junto à porta da varanda, com a cidade lá fora",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/De2PQ6gOxH4_01_30.25.jpg"
+ },
+ "areia-cadeirao": {
+  "alt": "Cadeirão com manta, candeeiro de pé e cortinas de onda cinzentas",
+  "foco": 55,
+  "w": 720,
+  "h": 1279,
+  "origem": "instagram/media/Da52krZM7v6_01.jpg"
+ },
+ "areia-cortinas": {
+  "alt": "Parede de cortinas de onda cinzentas sobre chão de madeira clara",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/Da52krZM7v6_01_22.00.jpg"
+ },
+ "areia-porta": {
+  "alt": "Porta de correr com caixilho preto e cortinas abertas para a varanda",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/Da52krZM7v6_01_07.75.jpg"
+ },
+ "areia-quarto": {
+  "alt": "Quarto com tapete claro e cortinas de onda junto à porta da varanda",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/Da52krZM7v6_01_24.50.jpg"
+ },
+ "voile-cadeirao": {
+  "alt": "Cadeirão claro em frente a cortinas de voile branco com a luz do dia a passar",
+  "foco": 55,
+  "w": 1217,
+  "h": 2160,
+  "origem": "instagram/media/De7eJ55OGhX_01.jpg"
+ },
+ "voile-sala-led": {
+  "alt": "Sala com sofá branco e cortina de voile iluminada por uma sanca de LED",
+  "foco": 45,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/De7eJ55OGhX_01_19.25.jpg"
+ },
+ "voile-tecido": {
+  "alt": "As ondas do voile pousadas no chão de madeira",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/De7eJ55OGhX_01_28.25.jpg"
+ },
+ "voile-quarto": {
+  "alt": "Quarto com cama de colcha verde e cortina iluminada pela sanca",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/De7eJ55OGhX_01_43.50.jpg"
+ },
+ "voile-janela": {
+  "alt": "Cortinas de voile abertas sobre uma janela grande e a paisagem",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/De7eJ55OGhX_01_51.50.jpg"
+ },
+ "curva-cortina": {
+  "alt": "Cortina de onda a seguir a curva de uma janela de sacada, sobre parquet em espinha",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DeCzdQvsUAj_01_08.50.jpg"
+ },
+ "curva-antes": {
+  "alt": "A mesma janela curva antes das cortinas, com parquet em espinha",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DeCzdQvsUAj_01_03.75.jpg"
+ },
+ "curva-escritorio": {
+  "alt": "Escritório com cortinas de onda do teto ao chão e secretária escura",
+  "foco": 45,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DeCzdQvsUAj_01_30.00.jpg"
+ },
+ "curva-parquet": {
+  "alt": "Cortinas de onda em toda a parede, com parquet de tacos",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DeCzdQvsUAj_01_22.75.jpg"
+ },
+ "estetica-cortina": {
+  "alt": "Cabine de estética com marquesa e cortinas de voile branco",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DeH39XCsdzL_01_19.25.jpg"
+ },
+ "estetica-prateleira": {
+  "alt": "Prateleira com a palavra Relax e cortina de voile ao lado",
+  "foco": 45,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DeH39XCsdzL_01_13.75.jpg"
+ },
+ "estetica-janela": {
+  "alt": "Janela de um espaço de estética com cortina de voile",
+  "foco": 45,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DeH39XCsdzL_01_31.50.jpg"
+ },
+ "gaia-voile-quarto": {
+  "alt": "Quarto com cortina de voile branco do teto ao chão e a luz do dia",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DS5hx7PDEaw_01_07.75.jpg"
+ },
+ "gaia-voile-janela": {
+  "alt": "Cortina de voile sobre uma janela larga, com a cidade ao fundo",
+  "foco": 45,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DS5hx7PDEaw_01_03.50.jpg"
+ },
+ "gaia-voile-sala": {
+  "alt": "Divisão clara com cortina de onda em voile e chão de madeira",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DS5hx7PDEaw_01_20.00.jpg"
+ },
+ "porto-sala-led": {
+  "alt": "Sala com sanca de LED, janelas e sofá cinzento",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DQudbekDFPO_01_06.75.jpg"
+ },
+ "porto-sala-cortina": {
+  "alt": "Cortina de voile iluminada pela sanca, ao lado do sofá",
+  "foco": 45,
+  "w": 698,
+  "h": 1280,
+  "origem": "fotogramas/posts/DQudbekDFPO_01_25.75.jpg"
+ },
+ "porto-quarto": {
+  "alt": "Quarto com cortina de voile e luz LED na sanca",
+  "foco": 45,
+  "w": 708,
+  "h": 1280,
+  "origem": "fotogramas/posts/DQudbekDFPO_01_22.50.jpg"
+ },
+ "porto-sala-antes": {
+  "alt": "Antes: sala com janelas sem cortinas e sofá cinzento",
+  "foco": 50,
+  "w": 720,
+  "h": 460,
+  "origem": "fotogramas/antes-depois/cortina-porto-sala-antes.jpg"
+ },
+ "porto-sala-depois": {
+  "alt": "Depois: a mesma sala com cortinas de voile e sanca de LED",
+  "foco": 50,
+  "w": 720,
+  "h": 498,
+  "origem": "fotogramas/antes-depois/cortina-porto-sala-depois.jpg"
+ },
+ "porto-quarto-antes": {
+  "alt": "Antes: quarto com a janela sem cortina",
+  "foco": 50,
+  "w": 720,
+  "h": 590,
+  "origem": "fotogramas/antes-depois/cortina-quarto-led-antes.jpg"
+ },
+ "porto-quarto-depois": {
+  "alt": "Depois: o mesmo quarto com cortina de voile e sanca de LED",
+  "foco": 50,
+  "w": 720,
+  "h": 618,
+  "origem": "fotogramas/antes-depois/cortina-quarto-led-depois.jpg"
+ },
+ "aveiro-sanca-quente": {
+  "alt": "Cortina de onda com sanca de LED de luz quente, num quarto com chão de madeira",
+  "foco": 40,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DM-QS3kM3_a_01_08.50.jpg"
+ },
+ "aveiro-quarto": {
+  "alt": "Quarto com cortina iluminada pela sanca e cama nova",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DM-QS3kM3_a_01_48.75.jpg"
+ },
+ "aveiro-ondas": {
+  "alt": "As ondas da cortina iluminadas por cima",
+  "foco": 45,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DM-QS3kM3_a_01_16.50.jpg"
+ },
+ "aveiro-porta": {
+  "alt": "Porta de correr com estore, ao lado da cortina com sanca",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DM-QS3kM3_a_01_13.25.jpg"
+ },
+ "gaia-sanefa-depois": {
+  "alt": "Sala com cortinas de onda novas, sem sanefa nem varões",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DLw7IousHtB_01_11.50.jpg"
+ },
+ "gaia-sanefa-antes": {
+  "alt": "Antes: a sala com cortinas antigas presas numa sanefa",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DLw7IousHtB_01_03.00.jpg"
+ },
+ "gaia-sanefa-quarto": {
+  "alt": "Quarto com cortina de onda clara do teto ao chão",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DLw7IousHtB_01_27.25.jpg"
+ },
+ "gaia-sanefa-varao": {
+  "alt": "Antes: janela com varão e argolas",
+  "foco": 45,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DLw7IousHtB_01_21.50.jpg"
+ },
+ "gaia-sanefa-pasta": {
+  "alt": "A pasta com o emblema da MD Decoração de Interiores pousada no tapete",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DLw7IousHtB_01_06.25.jpg"
+ },
+ "valongo-sala-cortina": {
+  "alt": "Cortinas de onda cinzentas na sala renovada, com teto falso e luz embutida",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DKKu7sRMZED_01_17.00.jpg"
+ },
+ "valongo-sala-papel": {
+  "alt": "Papel de parede com arcos em relevo",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DKKu7sRMZED_01_20.50.jpg"
+ },
+ "valongo-sala-tv": {
+  "alt": "Sala com móvel de televisão, papel de parede e cortinas",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DKKu7sRMZED_01_29.50.jpg"
+ },
+ "valongo-sala-sofa": {
+  "alt": "Sofá cinzento e cozinha ao fundo, na sala renovada",
+  "foco": 55,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DKKu7sRMZED_01_31.25.jpg"
+ },
+ "valongo-quarto-depois": {
+  "alt": "Quarto renovado com cortinas de onda castanhas, papel de parede e candeeiro suspenso",
+  "foco": 55,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DJpSh-7MBUb_01_23.75.jpg"
+ },
+ "valongo-quarto-antes": {
+  "alt": "Antes: o quarto vazio, com o chão antigo",
+  "foco": 55,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DJpSh-7MBUb_01_00.50.jpg"
+ },
+ "valongo-quarto-cortina": {
+  "alt": "Cama com colcha rosa-velho em frente às cortinas",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DJpSh-7MBUb_01_16.50.jpg"
+ },
+ "valongo-quarto-papel": {
+  "alt": "Papel de parede claro com textura de pedra e candeeiro dourado",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DJpSh-7MBUb_01_21.25.jpg"
+ },
+ "gaia-ripado": {
+  "alt": "Parede da televisão com ripado de madeira e papel de parede",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DJcZ1x6M0FX_01_15.25.jpg"
+ },
+ "gaia-ripado-papel": {
+  "alt": "Textura do papel de parede aplicado na sala",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DJcZ1x6M0FX_01_18.50.jpg"
+ },
+ "gaia-ripado-aplicar": {
+  "alt": "O Manuel a aplicar o papel de parede, rente ao rodapé",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DJcZ1x6M0FX_01_10.25.jpg"
+ },
+ "papel-folhagem": {
+  "alt": "Parede com papel de folhagem verde e bege",
+  "foco": 45,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/De4pOTWOT66_01_05.50.jpg"
+ },
+ "papel-relevo": {
+  "alt": "Papel de parede com relevo geométrico claro",
+  "foco": 45,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/De4pOTWOT66_01_37.00.jpg"
+ },
+ "papel-comoda": {
+  "alt": "Cómoda de madeira canelada e cadeira verde junto a uma parede nova",
+  "foco": 55,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/De4pOTWOT66_01_46.50.jpg"
+ },
+ "papel-ramos": {
+  "alt": "Papel de parede com ramos claros sobre o radiador",
+  "foco": 45,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/De4pOTWOT66_01_68.25.jpg"
+ },
+ "papel-sala-antes": {
+  "alt": "Antes: a parede da televisão pintada de branco",
+  "foco": 50,
+  "w": 720,
+  "h": 395,
+  "origem": "fotogramas/antes-depois/papel-sala-tv-antes.jpg"
+ },
+ "papel-sala-depois": {
+  "alt": "Depois: a mesma parede com papel de textura bege",
+  "foco": 50,
+  "w": 720,
+  "h": 395,
+  "origem": "fotogramas/antes-depois/papel-sala-tv-depois.jpg"
+ },
+ "papel-quarto-antes": {
+  "alt": "Antes: a parede do quarto pintada de branco",
+  "foco": 50,
+  "w": 720,
+  "h": 400,
+  "origem": "fotogramas/antes-depois/papel-quarto-comoda-antes.jpg"
+ },
+ "papel-quarto-depois": {
+  "alt": "Depois: a mesma parede com papel de tom areia",
+  "foco": 50,
+  "w": 720,
+  "h": 400,
+  "origem": "fotogramas/antes-depois/papel-quarto-comoda-depois.jpg"
+ },
+ "feira-sala": {
+  "alt": "Sala com cortinas de onda fechadas e sofá cinzento, numa moradia",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DHeaHv5MrIo_01_39.00.jpg"
+ },
+ "feira-voile": {
+  "alt": "Voile branco com a luz do dia, sobre chão de madeira escura",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DHeaHv5MrIo_01_44.75.jpg"
+ },
+ "feira-antes": {
+  "alt": "Antes: a sala com a porta de vidro sem cortinas",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DHeaHv5MrIo_01_14.50.jpg"
+ },
+ "campo-escritorio": {
+  "alt": "Escritório com cortina de onda clara e cadeira verde",
+  "foco": 50,
+  "w": 480,
+  "h": 854,
+  "origem": "fotogramas/posts/DGL-k7auedr_01_35.50.jpg"
+ },
+ "campo-quarto": {
+  "alt": "Quarto com colcha estampada e cortinas de onda",
+  "foco": 55,
+  "w": 480,
+  "h": 854,
+  "origem": "fotogramas/posts/DGL-k7auedr_01_50.00.jpg"
+ },
+ "campo-sala": {
+  "alt": "Sala com sofá claro e cortinas de onda",
+  "foco": 55,
+  "w": 480,
+  "h": 854,
+  "origem": "fotogramas/posts/DGL-k7auedr_01_30.75.jpg"
+ },
+ "campo-cortinas": {
+  "alt": "Cortinas de onda iguais em várias divisões da casa",
+  "foco": 50,
+  "w": 1080,
+  "h": 1350,
+  "origem": "instagram/media/DG0lXkEogif_02.jpg"
+ },
+ "campo-estore-cozinha": {
+  "alt": "Estore dia e noite na janela da cozinha",
+  "foco": 45,
+  "w": 1080,
+  "h": 1350,
+  "origem": "instagram/media/DGvFtg4sqM4_02.jpg"
+ },
+ "campo-estore-faixas": {
+  "alt": "Estore dia e noite com as faixas abertas sobre o lava-loiça",
+  "foco": 45,
+  "w": 1080,
+  "h": 1350,
+  "origem": "instagram/media/DGvFtg4sqM4_01.jpg"
+ },
+ "campo-estore-porta": {
+  "alt": "Estores dia e noite numa porta de correr",
+  "foco": 50,
+  "w": 1080,
+  "h": 1350,
+  "origem": "instagram/media/DGvFtg4sqM4_04.jpg"
+ },
+ "campo-estore-claro": {
+  "alt": "Estore dia e noite claro numa porta envidraçada",
+  "foco": 50,
+  "w": 1080,
+  "h": 1350,
+  "origem": "instagram/media/DGvFtg4sqM4_05.jpg"
+ },
+ "maia-sala": {
+  "alt": "Sala de jantar com cortina de voile do teto ao chão",
+  "foco": 50,
+  "w": 1080,
+  "h": 1350,
+  "origem": "instagram/media/DG32vFlM5x5_02.jpg"
+ },
+ "maia-ondas": {
+  "alt": "As ondas do voile vistas de baixo",
+  "foco": 50,
+  "w": 720,
+  "h": 900,
+  "origem": "fotogramas/posts/DG32vFlM5x5_03_00.00.jpg"
+ },
+ "matosinhos-quarto-led": {
+  "alt": "Quarto com sanca de LED sobre as cortinas de onda e cadeira junto à secretária",
+  "foco": 45,
+  "w": 1200,
+  "h": 1500,
+  "origem": "instagram/media/DKnMsoFMiKH_02.jpg"
+ },
+ "matosinhos-sala-led": {
+  "alt": "Sanca de LED a iluminar uma parede inteira de cortinas",
+  "foco": 45,
+  "w": 1200,
+  "h": 1500,
+  "origem": "instagram/media/DKnMsoFMiKH_03.jpg"
+ },
+ "matosinhos-quarto": {
+  "alt": "Quarto claro com cortinas de onda brancas",
+  "foco": 50,
+  "w": 900,
+  "h": 1125,
+  "origem": "instagram/media/DKnMsoFMiKH_01.jpg"
+ },
+ "canidelo-chao": {
+  "alt": "As ondas de uma cortina branca pousadas sobre soalho de carvalho",
+  "foco": 60,
+  "w": 1200,
+  "h": 1500,
+  "origem": "instagram/media/DFU6hv1MInJ_03.jpg"
+ },
+ "canidelo-quarto": {
+  "alt": "Quarto com cortinas de onda e estore por trás",
+  "foco": 45,
+  "w": 1200,
+  "h": 1500,
+  "origem": "instagram/media/DFU6hv1MInJ_01.jpg"
+ },
+ "canidelo-parede": {
+  "alt": "Parede de cortinas de onda num quarto com ar condicionado",
+  "foco": 45,
+  "w": 1200,
+  "h": 1500,
+  "origem": "instagram/media/DFU6hv1MInJ_04.jpg"
+ },
+ "gaia-sala-onda": {
+  "alt": "Sala com cortinas de onda bege, sofá claro e tapete escuro",
+  "foco": 50,
+  "w": 1440,
+  "h": 1800,
+  "origem": "instagram/media/DFDGkGrMLmg_01.jpg"
+ },
+ "gaia-sala-onda-2": {
+  "alt": "Cortinas de onda bege em toda a parede da sala",
+  "foco": 50,
+  "w": 1440,
+  "h": 1800,
+  "origem": "instagram/media/DFDGkGrMLmg_03.jpg"
+ },
+ "tapete-quarto": {
+  "alt": "Quarto com tapete claro por medida debaixo da cama",
+  "foco": 55,
+  "w": 1080,
+  "h": 1350,
+  "origem": "instagram/media/DIcCudBM6Aj_01.jpg"
+ },
+ "tapete-pormenor": {
+  "alt": "Pormenor do tapete de pelo curto junto à cama",
+  "foco": 60,
+  "w": 1080,
+  "h": 1350,
+  "origem": "instagram/media/DIcCudBM6Aj_02.jpg"
+ },
+ "casa-nova-sala": {
+  "alt": "Divisão vazia com cortina de voile branco e chão de madeira",
+  "foco": 50,
+  "w": 576,
+  "h": 1024,
+  "origem": "fotogramas/posts/DXxQ-P-MbUP_01_16.00.jpg"
+ },
+ "casa-nova-quarto": {
+  "alt": "Cortina de voile numa casa ainda por habitar",
+  "foco": 50,
+  "w": 576,
+  "h": 1024,
+  "origem": "fotogramas/posts/DXxQ-P-MbUP_01_31.25.jpg"
+ },
+ "vila-do-conde-lareira": {
+  "alt": "Sala com lareira elétrica e cortina iluminada pela sanca",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DPYfYVSDGMT_01_07.25.jpg"
+ },
+ "vila-do-conde-quarto": {
+  "alt": "Quarto com colcha geométrica e cortina de onda",
+  "foco": 55,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DPYfYVSDGMT_01_16.00.jpg"
+ },
+ "natal-sala": {
+  "alt": "Árvore de Natal iluminada ao lado de cortinas de voile",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DSNciJijC5f_01_10.75.jpg"
+ },
+ "natal-quarto": {
+  "alt": "Quarto com cortina de voile e cómoda de madeira",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/DSNciJijC5f_01_26.00.jpg"
+ },
+ "linho-janela": {
+  "alt": "Cortina de linho com a luz a entrar por baixo do estore",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/Dfe_GC8MrLw_01_33.75.jpg"
+ },
+ "linho-tecido": {
+  "alt": "Pormenor do tecido de linho de uma cortina",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/Dfe_GC8MrLw_01_45.75.jpg"
+ },
+ "linho-quarto": {
+  "alt": "Cortina de linho branca num quarto, junto a uma cómoda",
+  "foco": 50,
+  "w": 720,
+  "h": 1280,
+  "origem": "fotogramas/posts/Dfe_GC8MrLw_01_18.75.jpg"
+ },
+ "estofo-sofa-antes": {
+  "alt": "Antes: sofá de dois lugares com o tecido verde gasto",
+  "foco": 50,
+  "w": 359,
+  "h": 313,
+  "origem": "fotogramas/antes-depois/estofo-sofa-antes.jpg"
+ },
+ "estofo-sofa-depois": {
+  "alt": "Depois: o mesmo sofá com tecido novo rosa-velho e almofadas",
+  "foco": 50,
+  "w": 359,
+  "h": 313,
+  "origem": "fotogramas/antes-depois/estofo-sofa-depois.jpg"
+ },
+ "estofo-cadeirao-antes": {
+  "alt": "Antes: cadeirão com o tecido verde gasto",
+  "foco": 50,
+  "w": 359,
+  "h": 535,
+  "origem": "fotogramas/antes-depois/estofo-cadeirao-antes.jpg"
+ },
+ "estofo-cadeirao-depois": {
+  "alt": "Depois: o mesmo cadeirão com tecido novo cinzento e almofada",
+  "foco": 50,
+  "w": 359,
+  "h": 535,
+  "origem": "fotogramas/antes-depois/estofo-cadeirao-depois.jpg"
+ }
+}

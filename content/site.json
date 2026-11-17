@@ -1,0 +1,32 @@
+{
+  "marca": "MD Decoração de Interiores",
+  "marcaCurta": "MD Decoração",
+  "dono": "Manuel Dias",
+  "titulo": "MD Decoração de Interiores — cortinas, estores e papel de parede por medida no Grande Porto",
+  "descricao": "Cortinas e cortinados por medida, estores, papel de parede, estofos e carpetes no Grande Porto. Medição em casa e orçamento grátis.",
+  "frase": "Cortinas, estores, papel de parede e estofos por medida, do teto ao chão.",
+  "telefone": "916 868 792",
+  "email": "mddecoracaointeriores@gmail.com",
+  "whatsapp": "351916868792",
+  "instagram": "_mddecoracaointeriores_",
+  "zonas": [
+    "Porto",
+    "Vila Nova de Gaia",
+    "Matosinhos",
+    "Maia",
+    "Valongo",
+    "Gondomar",
+    "Vila do Conde",
+    "Santa Maria da Feira",
+    "Aveiro"
+  ],
+  "zonaResumo": "Grande Porto e arredores",
+  "concelhoBase": "Valongo",
+  "empresa": {
+    "nome": "",
+    "nif": "",
+    "morada": "",
+    "localidade": "Valongo"
+  },
+  "lancamento": "2025-01-17"
+}
