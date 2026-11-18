@@ -1,5 +1,5 @@
 // As páginas do site. Cada função devolve { caminho, titulo, descricao, seccao, corpo, ... } para a moldura (layout.mjs).
-import { esc, foto, video, marca, icone, mesAno, whatsappHref, urlVariante, partilhaFoto } from './util.mjs';
+import { esc, foto, video, marca, icone, mesAno, whatsappHref, urlVariante, partilhaFoto, posterUrl } from './util.mjs';
 import { telefoneHtml, ralHtml, direitosHtml, destinatariosHtml, textoSemCookies } from '../../legal-comum/index.mjs';
 
 const servicoPor = (ctx, slug) => ctx.servicos.find((s) => s.slug === slug);
@@ -16,11 +16,8 @@ function precarregar(ctx, nome, sizes) {
   const srcset = m.larguras.map((w) => `${urlVariante(ctx, nome, w, fmt)} ${w}w`).join(', ');
   return [{ fmt, srcset, sizes }];
 }
-function precarregarPoster(ctx, nomeVideo, sizes) {
-  const m = ctx.manifesto.videos[nomeVideo];
-  const fmt = m.formatos[0];
-  const srcset = m.larguras.map((w) => { const f = `video-${nomeVideo}-${m.resumo}-${w}.${fmt}`; ctx.usados.add(f); return `${ctx.href('/assets/img/' + f)} ${w}w`; }).join(', ');
-  return [{ fmt, srcset, sizes }];
+function precarregarPoster(ctx, nomeVideo) {
+  return [{ href: posterUrl(ctx, nomeVideo), fmt: 'webp' }];
 }
 
 // ---------- peças ----------
@@ -133,7 +130,7 @@ export function inicio(ctx) {
         <figcaption class="ladrilho__legenda">Sanca com LED</figcaption>
       </figure>
       ${mosaico.map((m) => `<figure class="ladrilho">
-        <div class="moldura">${foto(ctx, m.nome, { sizes: '(min-width: 1000px) 22vw, 46vw' })}</div>
+        <div class="moldura">${foto(ctx, m.nome, { sizes: '(min-width: 1000px) 22vw, 46vw', cedo: true })}</div>
         <figcaption class="ladrilho__legenda">${esc(m.legenda)}</figcaption>
       </figure>`).join('\n      ')}
     </div>
@@ -205,7 +202,7 @@ export function inicio(ctx) {
 
   return {
     caminho: '/', titulo: site.marca, seccao: 'inicio', descricao: site.descricao,
-    precarregar: precarregarPoster(ctx, capaVideo, '(min-width: 1000px) 31vw, 46vw'),
+    precarregar: precarregarPoster(ctx, capaVideo),
     jsonLd: [ldNegocio(ctx), { '@context': 'https://schema.org', '@type': 'WebSite', name: site.marca, alternateName: site.marcaCurta, url: ctx.abs('/') }],
     corpo: [capa, servicos, trabalhos, antesDepoisSec, sobre].join('\n'),
   };
@@ -323,7 +320,7 @@ ${lightbox()}`;
   return {
     caminho: `/${s.slug}/`, titulo: s.titulo, seccao: 'servicos', corpo, descricao: s.descricao,
     ogImagem: partilhaFoto(ctx, s.capa),
-    precarregar: s.video ? precarregarPoster(ctx, s.video, '(min-width: 900px) 38vw, 92vw') : precarregar(ctx, s.capa, '(min-width: 900px) 38vw, 92vw'),
+    precarregar: s.video ? precarregarPoster(ctx, s.video) : precarregar(ctx, s.capa, '(min-width: 900px) 38vw, 92vw'),
     jsonLd: [
       migalhas(ctx, [['Início', '/'], ['Serviços', '/servicos/'], [s.nomeLongo, `/${s.slug}/`]]),
       { '@context': 'https://schema.org', '@type': 'Service', name: s.nomeLongo, description: s.descricao, provider: { '@id': ctx.abs('/#negocio') }, areaServed: ctx.site.zonas.map((z) => ({ '@type': 'City', name: z })) },
@@ -447,7 +444,7 @@ export function sobre(ctx) {
   return {
     caminho: '/sobre/', titulo: 'Sobre', seccao: 'sobre', corpo,
     descricao: `A ${site.marca} é o trabalho do Manuel Dias: cortinas, estores, papel de parede e estofos por medida no ${site.zonaResumo}.`,
-    precarregar: precarregarPoster(ctx, 'aplicar-papel', '(min-width: 900px) 38vw, 92vw'),
+    precarregar: precarregarPoster(ctx, 'aplicar-papel'),
     jsonLd: [migalhas(ctx, [['Início', '/'], ['Sobre', '/sobre/']])],
   };
 }

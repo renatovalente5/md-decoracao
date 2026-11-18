@@ -53,7 +53,9 @@
     });
     v.addEventListener('playing', () => bloco.classList.add('a-tocar', 'tocou'));
   }
-  if (videos.length && 'IntersectionObserver' in window) {
+  // os vídeos só começam depois de a página carregar: a imagem de espera (a imagem principal) não divide a rede com eles
+  const depoisDeCarregar = (fn) => { if (document.readyState === 'complete') setTimeout(fn, 150); else addEventListener('load', () => setTimeout(fn, 150), { once: true }); };
+  if (videos.length && 'IntersectionObserver' in window) depoisDeCarregar(() => {
     const perto = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting && automatico()) carregar($('video', e.target)); }), { rootMargin: '600px 0px' });
     const visto = new IntersectionObserver((es) => es.forEach((e) => {
       const bloco = e.target;
@@ -62,7 +64,7 @@
     }), { threshold: [0, 0.05, 0.35, 0.6] });
     videos.forEach((b) => { perto.observe(b); visto.observe(b); });
     document.addEventListener('visibilitychange', () => { if (document.hidden) videos.forEach((b) => { const v = $('video', b); if (!v.paused) v.pause(); }); });
-  }
+  });
 
   /* ---------- entrar ao descer: só o que está abaixo do primeiro ecrã ---------- */
   if (!menosMovimento.matches && 'IntersectionObserver' in window) {

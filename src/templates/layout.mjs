@@ -10,8 +10,9 @@ export function pagina(ctx, p) {
   const og = p.ogImagem || ctx.partilhaMarca;
   const atual = (c) => p.seccao === c ? ' aria-current="page"' : '';
   const temaCor = '#F6F2EB';
-  const precarregar = (p.precarregar || []).map((pr) =>
-    `<link rel="preload" as="image" type="image/${pr.fmt}" imagesrcset="${pr.srcset}" imagesizes="${esc(pr.sizes)}" fetchpriority="high">`).join('\n');
+  const precarregar = (p.precarregar || []).map((pr) => pr.href
+    ? `<link rel="preload" as="image" type="image/${pr.fmt}" href="${pr.href}" fetchpriority="high">`
+    : `<link rel="preload" as="image" type="image/${pr.fmt}" imagesrcset="${pr.srcset}" imagesizes="${esc(pr.sizes)}" fetchpriority="high">`).join('\n');
   const wa = whatsappHref(site.whatsapp, 'Olá! Gostava de pedir um orçamento.');
 
   const nav = [

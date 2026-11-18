@@ -20,12 +20,12 @@ export function criarContexto({ base, url, manifesto, fotos }) {
 
 // <picture> com AVIF e WebP nas larguras que existem, e um JPEG de recurso.
 // sizes: o que a imagem ocupa no ecrã; prioridade: só na imagem principal do primeiro ecrã (LCP).
-export function foto(ctx, nome, { sizes = '100vw', classe = '', prioridade = false, alt, foco, largura } = {}) {
+export function foto(ctx, nome, { sizes = '100vw', classe = '', prioridade = false, cedo = false, alt, foco, largura } = {}) {
   const m = ctx.manifesto.fotos[nome];
   const info = ctx.fotos[nome];
   if (!m || !info) throw new Error(`Fotografia desconhecida: ${nome}`);
   return imagem(ctx, `${nome}-${m.resumo}`, m, {
-    sizes, classe, prioridade, alt: alt ?? info.alt, foco: foco ?? info.foco, largura,
+    sizes, classe, prioridade, cedo, alt: alt ?? info.alt, foco: foco ?? info.foco, largura,
   });
 }
 
@@ -35,7 +35,7 @@ export function posterVideo(ctx, nome, opts = {}) {
   return imagem(ctx, `video-${nome}-${m.resumo}`, m, { alt: '', ...opts });
 }
 
-function imagem(ctx, prefixo, m, { sizes = '100vw', classe = '', prioridade = false, alt = '', foco = 50, largura }) {
+function imagem(ctx, prefixo, m, { sizes = '100vw', classe = '', prioridade = false, cedo = false, alt = '', foco = 50, largura }) {
   const larguras = largura ? m.larguras.filter((w) => w <= largura) : m.larguras;
   const ws = larguras.length ? larguras : [m.larguras[0]];
   const fontes = m.formatos.map((fmt) => {
@@ -46,7 +46,8 @@ function imagem(ctx, prefixo, m, { sizes = '100vw', classe = '', prioridade = fa
   ctx.usados.add(jpg);
   const h = Math.round(m.h * m.jpg / m.w);
   const estilo = foco !== 50 ? ` style="object-position:50% ${foco}%"` : '';
-  const carregar = prioridade ? 'fetchpriority="high" decoding="async"' : 'loading="lazy" decoding="async"';
+  // prioridade: a imagem principal; cedo: no primeiro ecrã mas não a principal (sem lazy, prioridade normal)
+  const carregar = prioridade ? 'fetchpriority="high" decoding="async"' : cedo ? 'decoding="async"' : 'loading="lazy" decoding="async"';
   return `<picture${classe ? ` class="${classe}"` : ''}>${fontes}<img src="${ctx.href('/assets/img/' + jpg)}" width="${m.jpg}" height="${h}" alt="${esc(alt)}" ${carregar}${estilo}></picture>`;
 }
 
@@ -70,17 +71,25 @@ export function partilhaMarca(ctx) {
   return ctx.abs(ctx.href('/assets/img/' + f).replace(ctx.base, ''));
 }
 
+// A imagem de espera de um vídeo: WebP a 720 px (ou a maior que houver). É o `poster` do próprio <video>: assim a
+// imagem principal (LCP) é ela, e o vídeo a tocar por cima no mesmo elemento já não conta como uma imagem nova e tardia.
+export function posterUrl(ctx, nome) {
+  const m = ctx.manifesto.videos[nome];
+  const larg = m.larguras.includes(720) ? 720 : m.larguras[m.larguras.length - 1];
+  const fmt = m.formatos.includes('webp') ? 'webp' : m.formatos[0];
+  const f = `video-${nome}-${m.resumo}-${larg}.${fmt}`;
+  ctx.usados.add(f);
+  return ctx.href('/assets/img/' + f);
+}
+
 // Vídeo sem som, em ciclo, que só toca quando se vê (o site.js trata disso), com botão de pausa (WCAG 2.2.2).
-export function video(ctx, nome, { classe = '', rotulo = 'Vídeo', prioridade = false, sizes = '100vw' } = {}) {
+export function video(ctx, nome, { classe = '', rotulo = 'Vídeo' } = {}) {
   const m = ctx.manifesto.videos[nome];
   if (!m) throw new Error(`Vídeo desconhecido: ${nome}`);
   const mp4 = `${nome}.mp4`;
   ctx.usados.add('video:' + mp4);
-  const posterJpg = `video-${nome}-${m.resumo}-${m.jpg}.jpg`;
-  ctx.usados.add(posterJpg);
   return `<div class="video ${classe}" data-video>
-  ${posterVideo(ctx, nome, { classe: 'video__poster', prioridade, sizes })}
-  <video muted playsinline loop preload="none" poster="${ctx.href('/assets/img/' + posterJpg)}" data-src="${ctx.href('/assets/video/' + mp4)}" aria-label="${esc(rotulo)}" width="${m.w}" height="${m.h}"></video>
+  <video muted playsinline loop preload="none" poster="${posterUrl(ctx, nome)}" data-src="${ctx.href('/assets/video/' + mp4)}" aria-label="${esc(rotulo)}" width="${m.w}" height="${m.h}"></video>
   <button class="video__botao" type="button" aria-pressed="false" data-video-botao>
     <svg class="i-pausa" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg>
     <svg class="i-tocar" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
