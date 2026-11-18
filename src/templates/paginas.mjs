@@ -22,7 +22,7 @@ function precarregarPoster(ctx, nomeVideo) {
 
 // ---------- peças ----------
 
-export function cartaoTrabalho(ctx, t, { sizes = '(min-width: 1100px) 340px, (min-width: 700px) 45vw, 88vw', classe = '' } = {}) {
+export function cartaoTrabalho(ctx, t, { sizes = '(min-width: 1100px) 290px, (min-width: 800px) 31vw, 46vw', classe = '' } = {}) {
   return `<article class="cartao-trabalho ${classe}" data-servicos="${t.servicos.join(' ')}">
   <a class="cartao-trabalho__ligacao" href="${ctx.href('/trabalhos/' + t.slug + '/')}">
     <div class="cartao-trabalho__foto moldura">${foto(ctx, t.fotos[0], { sizes })}</div>
@@ -348,14 +348,14 @@ export function trabalhosLista(ctx) {
     </div>
     <p class="sr" aria-live="polite" data-filtro-contagem></p>
     <div class="grelha-trabalhos grelha-trabalhos--toda">
-      ${lista.map((t, i) => cartaoTrabalho(ctx, t, { sizes: '(min-width: 1100px) 340px, (min-width: 700px) 45vw, 92vw' })).join('\n')}
+      ${lista.map((t, i) => cartaoTrabalho(ctx, t, { sizes: '(min-width: 1100px) 290px, (min-width: 800px) 31vw, 46vw' })).join('\n')}
     </div>
   </div>
 </section>`;
   return {
     caminho: '/trabalhos/', titulo: 'Trabalhos', seccao: 'trabalhos', corpo,
     descricao: `Trabalhos de cortinas por medida, estores, papel de parede e estofos no ${ctx.site.zonaResumo}: Porto, Gaia, Matosinhos, Maia, Valongo, Aveiro e mais.`,
-    precarregar: precarregar(ctx, lista[0].fotos[0], '(min-width: 1100px) 340px, (min-width: 700px) 45vw, 92vw'),
+    precarregar: precarregar(ctx, lista[0].fotos[0], '(min-width: 1100px) 290px, (min-width: 800px) 31vw, 46vw'),
     jsonLd: [migalhas(ctx, [['Início', '/'], ['Trabalhos', '/trabalhos/']])],
   };
 }
